@@ -1,5 +1,9 @@
 package com.example.examen.service;
 
-public interface IConsultaService {
+import com.example.examen.entity.Consulta;
 
+public interface IConsultaService {
+	
+	public Consulta findById(Long idConsulta);
+	public Consulta create (Consulta consulta);
 }
