@@ -1,5 +1,7 @@
 package com.example.examen.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,12 @@ public class ConsultaController {
 	public ResponseEntity<Consulta> getConsulta(@PathVariable("id") long id) {
 		Consulta consulta = consultaService.findById(id);
 		return ResponseEntity.ok(consulta);
+	}
+	
+	@GetMapping("/medico/{id}")
+	public ResponseEntity<List<Consulta>> getConsultaByMedico(@PathVariable("id") long id){
+		List<Consulta> consultas = consultaService.findByIdMedico(id);
+		return ResponseEntity.ok(consultas);
 	}
 	
 	@PostMapping

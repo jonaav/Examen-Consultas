@@ -1,5 +1,8 @@
 package com.example.examen.service;
 
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +26,18 @@ public class ConsultaServiceImpl implements IConsultaService{
 	public Consulta create(Consulta consulta) {
 		Consulta nuevaConsulta = consultaRepository.save(consulta);
 		return nuevaConsulta;
+	}
+
+	@Override
+	public List<Consulta> findByIdMedico(Long idMedico) {
+		List<Consulta> consultas = consultaRepository.findByIdMedico(idMedico);
+		return consultas;
+	}
+
+	@Override
+	public List<Consulta> findByFechaAndIdPaciente(Date fecha, Long idPaciente) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
