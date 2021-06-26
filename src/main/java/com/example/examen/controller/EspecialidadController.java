@@ -47,7 +47,7 @@ public class EspecialidadController {
 	}
 	
 	
-	@PutMapping
+	@PutMapping("/{id}")
 	public ResponseEntity<Especialidad> update (@PathVariable("id") long id, @RequestBody Especialidad especialidad){
 		Especialidad currentEspecialidad = especialidadService.findById(id);
 		especialidad.setIdEspecialidad(id);
