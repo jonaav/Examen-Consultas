@@ -38,6 +38,8 @@ public class DetalleConsulta implements Serializable{
 		this.tratamiento = tratamiento;
 		this.consulta = consulta;
 	}
+	
+	public DetalleConsulta() {}
 
 	public Long getIdDetalle() {
 		return idDetalle;

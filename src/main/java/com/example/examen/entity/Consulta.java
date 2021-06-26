@@ -34,6 +34,8 @@ public class Consulta implements Serializable{
 		this.idConsulta = idConsulta;
 		this.fecha = fecha;
 	}
+	
+	public Consulta() {}
 
 	public Long getIdConsulta() {
 		return idConsulta;

@@ -50,6 +50,8 @@ public class Paciente implements Serializable{
 		this.telefono = telefono;
 		this.email = email;
 	}
+	
+	public Paciente() {}
 
 	public Long getIdPaciente() {
 		return idPaciente;

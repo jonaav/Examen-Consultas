@@ -36,6 +36,10 @@ public class Medico implements Serializable{
 		this.apellidos = apellidos;
 		this.cmp = cmp;
 	}
+	
+	public Medico() {
+		
+	}
 
 	public Long getIdMedico() {
 		return idMedico;

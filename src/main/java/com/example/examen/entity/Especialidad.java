@@ -26,6 +26,8 @@ public class Especialidad implements Serializable{
 		this.idEspecialidad = idEspecialidad;
 		this.nombre = nombre;
 	}
+	
+	public Especialidad() {}
 
 	public Long getIdEspecialidad() {
 		return idEspecialidad;
