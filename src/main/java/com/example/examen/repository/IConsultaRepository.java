@@ -11,7 +11,7 @@ import com.example.examen.entity.Consulta;
 
 public interface IConsultaRepository extends JpaRepository<Consulta, Long>{
 
-	@Query(value = "SELECT * FROM consultas c INNER JOIN medicos m WHERE c.id_medico = :idMedico", 
+	@Query(value = "SELECT * FROM consultas c WHERE c.id_medico = :idMedico", 
 			nativeQuery = true)
 	public List<Consulta> findByIdMedico(@Param("idMedico")Long idMedico);
 	
